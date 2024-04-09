@@ -6,20 +6,17 @@
 
 
     <h:head>
-        <title>Application&gt;formulaire_3</title>
+        <title>Application>formulaire_3</title>
     </h:head>
     <h:body>
 
-        <h1>Applicationformulaire_3</h1>
+        <h1>Application>formulaire_3</h1>
 
         <h:form>
             <h:outputLabel value="Entrez un nombre" for="nombre"/>
             <h:inputText id="nombre" value="#{bean.nombre}"/>
             <h:commandButton value="Valider" action="#{bean.afficher()}"/>
         </h:form>
-        <f:metadata>
-            <f:viewParam name="nb" value="#{bean.nombre}" />
-        </f:metadata>
-
+    
     </h:body>
 </html>

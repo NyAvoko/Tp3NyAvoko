@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html">
+
+    <body>
+
+        <ui:composition template="./WEB-INF/templantes/template_defaut.xhtml">
+
+            <ui:define name="metadata">
+                <f:metadata>
+                    <f:viewParam name="nb" value="#{bean2.nombre}"/>
+                </f:metadata>
+            </ui:define>
+
+            <ui:define name="top">
+                TP PRG > Exercice 4
+            </ui:define>
+
+            <ui:define name="content">
+                <h1>Application>formulaire_4</h1>
+                <h:form>
+                    <h:outputLabel value="Entrez un nombre" for="nombre"/>
+                    <h:inputText id="nombre" value="#{bean2.nombre}"/>
+                    <h:commandButton value="Valider" action="#{bean2.afficher()}"/>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
